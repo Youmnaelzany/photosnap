@@ -1,9 +1,9 @@
-import { STORIES } from "@/lib/Concents";
-import Wrapper from "./Wrapper";
 import Image from "next/image";
-import { Separator } from "./ui/separator";
 import Link from "next/link";
 import { MoveRight } from "lucide-react";
+import { STORIES } from "@/lib/Concents";
+import { Separator } from "./ui/separator";
+import Wrapper from "./Wrapper";
 
 const Stories = () => {
   return (
@@ -15,38 +15,39 @@ const Stories = () => {
       {STORIES.map((story) => (
         <div
           key={story.id}
-          className="relative group overflow-hidden transition-transform duration-300 hover:-translate-y-8"
+          className="group relative overflow-hidden transition-transform duration-300 hover:-translate-y-8"
         >
           <picture>
-            <source media="(min-width:768px)" srcSet={story.imageDesktop} />
+            <source
+              media="(min-width:768px)"
+              srcSet={story.imageDesktop}
+            />
             <Image
               src={story.imageMobile}
               alt={story.name}
               width={375}
               height={375}
-              className="md:w-[360px] md:h-[500px]"
+              className="md:h-[500px] md:w-[360px]"
             />
           </picture>
           {/* Top overlay tint */}
-          <div className="absolute inset-0 bg-[#979797]/40 mix-blend-multiply pointer-events-none z-0" />
+          <div className="pointer-events-none absolute inset-0 z-0 bg-[#979797]/40 mix-blend-multiply" />
           {/* Gradient bottom border (reveals on hover) */}
-          <div className="absolute bottom-0 left-0 w-full h-1.5 bg-linear-to-r from-[#FFC593] via-[#BC7198] to-[#5A77FF] opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10" />
-          <div className="absolute bottom-0 left-0 space-y-1 w-full p-8 z-20">
+          <div className="absolute bottom-0 left-0 z-10 h-1.5 w-full bg-linear-to-r from-[#FFC593] via-[#BC7198] to-[#5A77FF] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          <div className="absolute bottom-0 left-0 z-20 w-full space-y-1 p-8">
             <div className="pb-4">
-              <p className="text-white text-[0.8125rem] font-normal tracking-normal">
+              <p className="text-[0.8125rem] font-normal tracking-normal text-white">
                 {story.date}
               </p>
-              <h2 className="text-white text-lg leading-6.25 font-bold tracking-normal">
+              <h2 className="text-lg leading-6.25 font-bold tracking-normal text-white">
                 {story.name}
               </h2>
-              <p className="text-white text-[0.8125rem] font-normal tracking-normal">
-                {story.by}
-              </p>
+              <p className="text-[0.8125rem] font-normal tracking-normal text-white">{story.by}</p>
             </div>
             <Separator />
             <Link
               href={`/stories/${story.id}`}
-              className="uppercase flex justify-between items-center gap-2 text-white pt-5 font-bold tracking-[2px] text-[0.75rem]"
+              className="flex items-center justify-between gap-2 pt-5 text-[0.75rem] font-bold tracking-[2px] text-white uppercase"
             >
               Read Story
               <MoveRight className="text-white" />

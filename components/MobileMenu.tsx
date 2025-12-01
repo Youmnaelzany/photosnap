@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Menu } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -6,9 +9,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 import { menuItems } from "./Header";
 import { Button } from "./ui/button";
 
@@ -17,13 +17,16 @@ const MobileMenu = () => {
     <div className="md:hidden">
       <Sheet>
         <SheetTrigger>
-          <Menu className="size-7 text-black cursor-pointer" />
+          <Menu className="size-7 cursor-pointer text-black" />
         </SheetTrigger>
-        <SheetContent className="bg-white py-12 px-6">
+        <SheetContent className="bg-white px-6 py-12">
           <SheetHeader>
             <SheetTitle>
               {" "}
-              <Link href="/" className="">
+              <Link
+                href="/"
+                className=""
+              >
                 <Image
                   src="/shared/desktop/logo.svg"
                   alt="Logo"
@@ -40,7 +43,7 @@ const MobileMenu = () => {
                     <li key={item.label}>
                       <Link
                         href={item.href}
-                        className="text-black font-bold tracking-[2px] text-[0.75rem] uppercase hover:opacity-30 duration-500 ease-in-out transition-colors cursor-pointer"
+                        className="cursor-pointer text-[0.75rem] font-bold tracking-[2px] text-black uppercase transition-colors duration-500 ease-in-out hover:opacity-30"
                       >
                         {item.label}
                       </Link>
@@ -50,7 +53,7 @@ const MobileMenu = () => {
                 <Button
                   type="button"
                   asChild
-                  className="rounded-none hover:bg-[#DFDFDF] hover:text-black duration-500 ease-in-out transition-colors cursor-pointer"
+                  className="cursor-pointer rounded-none transition-colors duration-500 ease-in-out hover:bg-[#DFDFDF] hover:text-black"
                 >
                   <Link href="/pricing">Get an invite</Link>
                 </Button>

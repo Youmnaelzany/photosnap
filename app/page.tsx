@@ -1,9 +1,3 @@
-import Stories from "@/components/Stories";
-
 export default function Home() {
-  return (
-    <main className="">
-      <Stories />
-    </main>
-  );
+  return <main className="">Home Page</main>;
 }

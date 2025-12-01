@@ -1,8 +1,8 @@
-import Link from "next/link";
-import Wrapper from "./Wrapper";
 import Image from "next/image";
-import { Button } from "./ui/button";
+import Link from "next/link";
 import MobileMenu from "./MobileMenu";
+import { Button } from "./ui/button";
+import Wrapper from "./Wrapper";
 
 export const menuItems = [
   {
@@ -23,9 +23,12 @@ const Header = () => {
     <Wrapper
       as="header"
       aria-label="Header"
-      className="flex items-center justify-between py-8 bg-white fixed top-0 left-0 right-0 z-50"
+      className="fixed top-0 right-0 left-0 z-50 flex items-center justify-between bg-white py-8"
     >
-      <Link href="/" className="">
+      <Link
+        href="/"
+        className=""
+      >
         <Image
           src="/shared/desktop/logo.svg"
           alt="Logo"
@@ -39,7 +42,7 @@ const Header = () => {
             <li key={item.label}>
               <Link
                 href={item.href}
-                className="text-black font-bold tracking-[2px] text-[0.75rem] uppercase hover:opacity-30 duration-500 ease-in-out transition-colors cursor-pointer"
+                className="cursor-pointer text-[0.75rem] font-bold tracking-[2px] text-black uppercase transition-colors duration-500 ease-in-out hover:opacity-30"
               >
                 {item.label}
               </Link>
@@ -50,7 +53,7 @@ const Header = () => {
       <Button
         type="button"
         asChild
-        className="rounded-none hidden md:block hover:bg-[#DFDFDF] hover:text-black duration-500 ease-in-out transition-colors cursor-pointer"
+        className="hidden cursor-pointer rounded-none transition-colors duration-500 ease-in-out hover:bg-[#DFDFDF] hover:text-black md:block"
       >
         <Link href="/pricing">Get an invite</Link>
       </Button>

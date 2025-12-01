@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 const dmSans = DM_Sans({
@@ -27,7 +28,8 @@ export default function RootLayout({
         className={`${dmSans.variable} antialiased`}
       >
         <Header />
-        <div className="mt-26 max-w-7xl mx-auto">{children}</div>
+        <div className="mx-auto mt-26 max-w-7xl">{children}</div>
+        <Footer />
       </body>
     </html>
   );
