@@ -49,7 +49,7 @@ const Stories = () => {
               className="uppercase flex justify-between items-center gap-2 text-white pt-5 font-bold tracking-[2px] text-[0.75rem]"
             >
               Read Story
-              <MoveRight />
+              <MoveRight className="text-white" />
             </Link>
           </div>
         </div>
