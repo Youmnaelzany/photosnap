@@ -128,3 +128,33 @@ export const STORIES = [
     imageMobile: "/stories/mobile/land-of-dreams.jpg",
   },
 ];
+
+export const APP_PROS = [
+  {
+    id: 1,
+    title: "100% Responsive",
+    paragraph:
+      "No matter which the device you&apos;re on, our site is fully responsive and stories look beautiful on any screen.",
+    icon: "/features/desktop/responsive.svg",
+    width: 72,
+    height: 72,
+  },
+  {
+    id: 2,
+    title: "No Photo Upload Limit",
+    paragraph:
+      "Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.",
+    icon: "/features/desktop/no-limit.svg",
+    width: 72,
+    height: 36,
+  },
+  {
+    id: 3,
+    title: "Available to Embed",
+    paragraph:
+      "Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more.",
+    icon: "/features/desktop/embed.svg",
+    width: 71,
+    height: 72,
+  },
+];
