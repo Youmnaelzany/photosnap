@@ -20,7 +20,7 @@ const MobileMenu = () => {
         <SheetTrigger>
           <Menu className="size-7 cursor-pointer text-black" />
         </SheetTrigger>
-        <SheetContent className="bg-white py-8">
+        <SheetContent className="bg-white py-8 h-[385px]">
           <SheetHeader>
             <SheetTitle>
               {" "}
@@ -56,7 +56,7 @@ const MobileMenu = () => {
                   <Button
                     type="button"
                     asChild
-                    className="cursor-pointer rounded-none transition-colors duration-500 ease-in-out hover:bg-[#DFDFDF] hover:text-black"
+                    className="cursor-pointer rounded-none transition-colors duration-500 ease-in-out hover:bg-[#DFDFDF] hover:text-black w-full uppercase font-bold text-[0.9375rem] tracking-[2.5px] h-[40px]"
                   >
                     <Link href="/pricing">Get an invite</Link>
                   </Button>

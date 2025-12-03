@@ -28,7 +28,7 @@ export default function RootLayout({
         className={`${dmSans.variable} antialiased`}
       >
         <Header />
-        <div className="mx-auto mt-26 max-w-7xl">{children}</div>
+        <div className="mx-auto mt-26 max-w-360">{children}</div>
         <Footer />
       </body>
     </html>

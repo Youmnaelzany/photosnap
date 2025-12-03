@@ -20,7 +20,6 @@ export default defineConfig([
       quotes: ["error", "double", { avoidEscape: true }],
       "@typescript-eslint/semi": ["error", "always"],
       semi: ["error", "always"],
-      "@typescript-eslint/no-explicit-any": "off",
     },
   },
   globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
