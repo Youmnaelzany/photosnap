@@ -5,14 +5,15 @@ import { STORIES } from "@/lib/Concents";
 import { Separator } from "./ui/separator";
 import Wrapper from "./Wrapper";
 
-const Stories = () => {
+const Stories = ({ limit }: { limit?: number }) => {
+  const stories = typeof limit === "number" ? STORIES.slice(0, limit) : STORIES;
   return (
     <Wrapper
       as="section"
       aria-label="Stories"
       className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
     >
-      {STORIES.map((story) => (
+      {stories.map((story) => (
         <div
           key={story.id}
           className="group relative overflow-hidden transition-transform duration-300 hover:-translate-y-8"

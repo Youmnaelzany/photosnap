@@ -3,7 +3,7 @@ import nextTs from "eslint-config-next/typescript";
 import prettier from "eslint-config-prettier";
 import { defineConfig, globalIgnores } from "eslint/config";
 
-const eslintConfig = defineConfig([
+export default defineConfig([
   ...nextVitals,
   ...nextTs,
   {
@@ -17,20 +17,15 @@ const eslintConfig = defineConfig([
     rules: {
       "prefer-arrow-callback": "error",
       "prefer-template": "error",
-      semi: ["error", "always"],
       quotes: ["error", "double", { avoidEscape: true }],
-      "@typescript-eslint/semi": ["error", "always"],
+      "@typescript-eslint/semi": ["error", "always"], 
     },
   },
-  // Override default ignores of eslint-config-next.
   globalIgnores([
-    // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
     "build/**",
     "next-env.d.ts",
   ]),
-  prettier,
+  prettier, // must be last
 ]);
-
-export default eslintConfig;
