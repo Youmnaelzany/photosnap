@@ -3,15 +3,13 @@ import Link from "next/link";
 import { MoveRight } from "lucide-react";
 import { STORIES } from "@/lib/Concents";
 import { Separator } from "./ui/separator";
-import Wrapper from "./Wrapper";
 
 const Stories = ({ limit }: { limit?: number }) => {
   const stories = typeof limit === "number" ? STORIES.slice(0, limit) : STORIES;
   return (
-    <Wrapper
-      as="section"
+    <section
       aria-label="Stories"
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl"
     >
       {stories.map((story) => (
         <div
@@ -56,7 +54,7 @@ const Stories = ({ limit }: { limit?: number }) => {
           </div>
         </div>
       ))}
-    </Wrapper>
+    </section>
   );
 };
 export default Stories;
