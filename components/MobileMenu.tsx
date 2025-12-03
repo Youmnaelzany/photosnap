@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/sheet";
 import { menuItems } from "./Header";
 import { Button } from "./ui/button";
+import { Separator } from "./ui/separator";
 
 const MobileMenu = () => {
   return (
@@ -19,7 +20,7 @@ const MobileMenu = () => {
         <SheetTrigger>
           <Menu className="size-7 cursor-pointer text-black" />
         </SheetTrigger>
-        <SheetContent className="bg-white px-6 py-12">
+        <SheetContent className="bg-white py-8">
           <SheetHeader>
             <SheetTitle>
               {" "}
@@ -36,28 +37,31 @@ const MobileMenu = () => {
               </Link>
             </SheetTitle>
 
-            <SheetDescription>
-              <nav className="">
-                <ul className="flex flex-col items-center justify-center gap-8">
-                  {menuItems.map((item) => (
-                    <li key={item.label}>
-                      <Link
-                        href={item.href}
-                        className="cursor-pointer text-[0.75rem] font-bold tracking-[2px] text-black uppercase transition-colors duration-500 ease-in-out hover:opacity-30"
-                      >
-                        {item.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-                <Button
-                  type="button"
-                  asChild
-                  className="cursor-pointer rounded-none transition-colors duration-500 ease-in-out hover:bg-[#DFDFDF] hover:text-black"
-                >
-                  <Link href="/pricing">Get an invite</Link>
-                </Button>
-              </nav>
+            <SheetDescription asChild>
+              <div>
+                <nav className="py-12 flex flex-col items-center justify-center gap-8">
+                  <ul className="flex flex-col items-center justify-center gap-8">
+                    {menuItems.map((item) => (
+                      <li key={item.label}>
+                        <Link
+                          href={item.href}
+                          className="cursor-pointer text-[0.75rem] font-bold tracking-[2px] text-black uppercase transition-colors duration-500 ease-in-out hover:opacity-30"
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <Separator className="bg-black/10" />
+                  <Button
+                    type="button"
+                    asChild
+                    className="cursor-pointer rounded-none transition-colors duration-500 ease-in-out hover:bg-[#DFDFDF] hover:text-black"
+                  >
+                    <Link href="/pricing">Get an invite</Link>
+                  </Button>
+                </nav>
+              </div>
             </SheetDescription>
           </SheetHeader>
         </SheetContent>

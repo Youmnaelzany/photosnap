@@ -18,14 +18,11 @@ export default defineConfig([
       "prefer-arrow-callback": "error",
       "prefer-template": "error",
       quotes: ["error", "double", { avoidEscape: true }],
-      "@typescript-eslint/semi": ["error", "always"], 
+      "@typescript-eslint/semi": ["error", "always"],
+      semi: ["error", "always"],
+      "@typescript-eslint/no-explicit-any": "off",
     },
   },
-  globalIgnores([
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
-  ]),
+  globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
   prettier, // must be last
 ]);

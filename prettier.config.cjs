@@ -1,6 +1,6 @@
 /** @type {import("prettier").Config} */
 module.exports = {
-  semi: true,
+  semi: true, // <-- add semicolons
   singleQuote: false,
   tabWidth: 2,
   trailingComma: "es5",
@@ -10,10 +10,7 @@ module.exports = {
   endOfLine: "lf",
   singleAttributePerLine: true,
 
-  plugins: [
-    "@ianvs/prettier-plugin-sort-imports",
-    "prettier-plugin-tailwindcss",
-  ],
+  plugins: ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
 
   importOrder: [
     "^(react|next(/.*)?)$",
@@ -24,8 +21,9 @@ module.exports = {
     "^@/styles/(.*)$",
     "^@/types/(.*)$",
     "^@/(.*)$",
-    "^[./]"
+    "^[./]",
   ],
+
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
 };

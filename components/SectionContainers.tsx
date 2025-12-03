@@ -22,4 +22,4 @@ const SectionContainers = ({ image, alt, title, description, imageDesktop, image
         </section>
     )
 }
-export default SectionContainers
+export default SectionContainers;
