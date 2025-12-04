@@ -21,6 +21,7 @@ const GetYourInvite = () => {
       aria-label="Get your invite"
       className="relative mx-auto w-full max-w-360"
     >
+        
       <picture>
         <source
           media="(min-width:1024px)"

@@ -1,4 +1,6 @@
+import ComparePrices from "@/components/ComparePrices";
 import OtherContainers from "@/components/OtherContainers";
+import Packages from "@/components/Packages";
 
 export default function PricingPage() {
   return (
@@ -12,6 +14,8 @@ export default function PricingPage() {
         imageTablet="/pricing/tablet/hero.jpg"
         className=""
       />
+      <Packages />
+      <ComparePrices />
     </main>
   );
 }

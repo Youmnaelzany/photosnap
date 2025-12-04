@@ -27,7 +27,7 @@
   "files.autoSave": "onFocusChange",
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
-  "workbench.iconTheme": "vs-seti",
+  "workbench.iconTheme": "material-icon-theme",
   "extensions.autoCheckUpdates": false,
   "editor.fontLigatures": false
 }
