@@ -1,26 +1,68 @@
-import { cn } from "@/lib/utils"
-import Link from "next/link"
-import { ArrowRightIcon } from "lucide-react"
-import Image from "next/image"
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRightIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-const SectionContainers = ({ image, alt, title, description, imageDesktop, imageTablet, bgColor, className, textColor }: { image: string, alt: string, title: string, description: string, imageDesktop: string, imageTablet: string, bgColor: string, className: string, textColor: string }) => {
-    return (
-        <section className={cn("flex flex-col max-w-360", className)} >
-            <picture>
-                <source media="(min-width:1024px)" srcSet={imageDesktop} />
-                <source media="(min-width:768px)" srcSet={imageTablet} />
-                <Image src={image} alt={alt} width={375} height={294} className="w-full h-auto md:w-[273px] md:h-[650px] lg:w-[830px] lg:h-[650px]" />
-            </picture>
-            <div className={`bg-${bgColor} w-full h-[419px] md:w-[495px] md:h-[650px] lg:w-[610px] lg:h-[650px] flex flex-col justify-center items-center text-${textColor}`}>
-                <div className="w-[318px] h-[275px] md:w-[387px] md:h-[304px] lg:w-[387px] lg:h-[329px]">
-                    <h2 className="font-bold text-[2rem] tracking-[3.33px] leading-10 md:tracking-[4.17px] md:leading-12 md:text-[2.5rem] uppercase flex items-center justify-center w-[318px] md:w-[387px]">{title}</h2>
-                    <p className="opacity-60 font-normal tracking-normal leading-6.25 text-[0.9375rem]  pt-4 pb-6 md:pt-5 md:pb-12">{description}</p>
-                    <Link href={"#"} className="font-bold tracking-[2px] leading-[auto] text-[0.75rem] flex items-center gap-4 uppercase">VIEW THE STORIES
-                        <ArrowRightIcon className={`text-${textColor}`} />
-                    </Link>
-                </div>
-            </div>
-        </section>
-    )
-}
+const SectionContainers = ({
+  image,
+  alt,
+  title,
+  description,
+  imageDesktop,
+  imageTablet,
+  bgColor,
+  className,
+  textColor,
+}: {
+  image: string;
+  alt: string;
+  title: string;
+  description: string;
+  imageDesktop: string;
+  imageTablet: string;
+  bgColor: string;
+  className: string;
+  textColor: string;
+}) => {
+  return (
+    <section className={cn("flex max-w-360 flex-col", className)}>
+      <picture>
+        <source
+          media="(min-width:1024px)"
+          srcSet={imageDesktop}
+        />
+        <source
+          media="(min-width:768px)"
+          srcSet={imageTablet}
+        />
+        <Image
+          src={image}
+          alt={alt}
+          width={375}
+          height={294}
+          className="h-auto w-full md:h-[650px] md:w-[273px] lg:h-[650px] lg:w-[830px]"
+        />
+      </picture>
+      <div
+        className={`bg-${bgColor} flex h-[419px] w-full flex-col items-center justify-center md:h-[650px] md:w-[495px] lg:h-[650px] lg:w-[610px] text-${textColor}`}
+      >
+        <div className="h-[275px] w-[318px] md:h-[304px] md:w-[387px] lg:h-[329px] lg:w-[387px]">
+          <h2 className="flex w-[318px] items-center justify-center text-[2rem] leading-10 font-bold tracking-[3.33px] uppercase md:w-[387px] md:text-[2.5rem] md:leading-12 md:tracking-[4.17px]">
+            {title}
+          </h2>
+          <p className="pt-4 pb-6 text-[0.9375rem] leading-6.25 font-normal tracking-normal opacity-60 md:pt-5 md:pb-12">
+            {description}
+          </p>
+          <Link
+            href={"#"}
+            className="flex items-center gap-4 text-[0.75rem] leading-[auto] font-bold tracking-[2px] uppercase transition-all duration-500 ease-in-out hover:underline"
+          >
+            VIEW THE STORIES
+            <ArrowRightIcon className={`text-${textColor}`} />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
 export default SectionContainers;

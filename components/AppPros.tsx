@@ -2,10 +2,11 @@ import Image from "next/image";
 import { APP_PROS } from "../lib/Concents";
 import Wrapper from "./Wrapper";
 
-const AppPros = () => {
+const AppPros = ({ limit }: { limit?: number }) => {
+  const appProsList = typeof limit === "number" ? APP_PROS.slice(0, limit) : APP_PROS;
   return (
-    <Wrapper className="flex flex-col items-center justify-center gap-14 py-20 md:gap-20 md:py-30 lg:flex-row lg:items-baseline lg:justify-between lg:gap-7.5">
-      {APP_PROS.map((appPros) => (
+    <Wrapper className="grid grid-cols-1 items-center justify-center gap-y-14 py-20 md:grid-cols-2 md:gap-20 md:gap-x-2.75 md:gap-y-18 md:py-30 lg:grid-cols-3 lg:flex-row lg:items-baseline lg:justify-between lg:gap-x-7.5 lg:gap-y-28.5">
+      {appProsList.map((appPros) => (
         <div
           key={appPros.id}
           className="flex flex-col items-center justify-center gap-12"

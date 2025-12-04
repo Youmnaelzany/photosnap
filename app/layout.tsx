@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import GetYourInvite from "@/components/GetYourInvite";
 import Header from "@/components/Header";
 
 const dmSans = DM_Sans({
@@ -29,6 +30,7 @@ export default function RootLayout({
       >
         <Header />
         <div className="mx-auto mt-26 max-w-360">{children}</div>
+        <GetYourInvite />
         <Footer />
       </body>
     </html>

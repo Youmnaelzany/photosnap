@@ -157,4 +157,31 @@ export const APP_PROS = [
     width: 71,
     height: 72,
   },
+  {
+    id: 4,
+    title: "Custom Domain",
+    paragraph:
+      "With Photosnap subscriptions you can host your stories on your own domain. You can also remove our branding!",
+    icon: "/features/desktop/custom-domain.svg",
+    width: 71,
+    height: 72,
+  },
+  {
+    id: 5,
+    title: "Boost Your Exposure",
+    paragraph:
+      "Users that viewed your story or gallery can easily get notifed of new and featured stories with our built in mailing list.",
+    icon: "/features/desktop/boost-exposure.svg",
+    width: 71,
+    height: 72,
+  },
+  {
+    id: 6,
+    title: "Drag & Drop Image",
+    paragraph:
+      "Easily drag and drop your image and get beautiful shots everytime. No over the top tooling to add friction to creating stories.",
+    icon: "/features/desktop/drag-drop.svg",
+    width: 71,
+    height: 72,
+  },
 ];

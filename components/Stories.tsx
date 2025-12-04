@@ -9,12 +9,12 @@ const Stories = ({ limit }: { limit?: number }) => {
   return (
     <section
       aria-label="Stories"
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-360"
+      className="grid max-w-360 grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
     >
       {stories.map((story) => (
         <div
           key={story.id}
-          className="group relative w-full md:w-fit justify-self-start overflow-hidden transition-transform duration-300 hover:-translate-y-8"
+          className="group relative w-full justify-self-start overflow-hidden transition-transform duration-300 hover:-translate-y-8 md:w-fit"
         >
           <picture>
             <source
@@ -26,11 +26,11 @@ const Stories = ({ limit }: { limit?: number }) => {
               alt={story.name}
               width={375}
               height={375}
-              className="w-full h-auto md:h-[500px] md:w-[384px]"
+              className="h-auto w-full md:h-[500px] md:w-[384px]"
             />
           </picture>
           {/* Top overlay tint */}
-          <div className="pointer-events-none absolute inset-0 z-10 bg-[#979797]/40 mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          <div className="pointer-events-none absolute inset-0 z-10 bg-[#979797]/40 opacity-0 mix-blend-multiply transition-opacity duration-300 group-hover:opacity-100" />
           {/* Gradient bottom border (reveals on hover) */}
           <div className="absolute bottom-0 left-0 z-20 h-1.5 w-full bg-linear-to-r from-[#FFC593] via-[#BC7198] to-[#5A77FF] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           <div className="absolute bottom-0 left-0 z-30 w-full space-y-1 p-8">

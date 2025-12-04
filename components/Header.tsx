@@ -23,7 +23,7 @@ const Header = () => {
     <Wrapper
       as="header"
       aria-label="Header"
-      className="fixed top-0 right-0 left-0 z-50 flex items-center justify-between bg-white py-8 w-full max-w-360 mx-auto"
+      className="fixed top-0 right-0 left-0 z-50 mx-auto flex w-full max-w-360 items-center justify-between bg-white py-8"
     >
       <Link
         href="/"
@@ -53,7 +53,7 @@ const Header = () => {
       <Button
         type="button"
         asChild
-        className="hidden cursor-pointer rounded-none transition-colors duration-500 ease-in-out hover:bg-[#DFDFDF] hover:text-black uppercase font-bold text-[0.75rem] tracking-[2px] md:flex w-[158px] h-[40px] leading-[auto]"
+        className="hidden h-[40px] w-[158px] cursor-pointer rounded-none text-[0.75rem] leading-[auto] font-bold tracking-[2px] uppercase transition-colors duration-500 ease-in-out hover:bg-[#DFDFDF] hover:text-black md:flex"
       >
         <Link href="/pricing">Get an invite</Link>
       </Button>

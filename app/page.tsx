@@ -7,7 +7,7 @@ export default function Home() {
     <main className="">
       <HomeStories />
       <Stories limit={4} />
-      <AppPros />
+      <AppPros limit={3} />
     </main>
   );
 }
